@@ -8,7 +8,12 @@ package com.mycompany.ujian_rkppl;
  *
  * @author SB 604-22
  */
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 public class Soal {
+    @Before
     public int pangkat(int bil,int pangkat){
         int hasil = 0;
         int  n= 1;
@@ -18,6 +23,18 @@ public class Soal {
     }
     return hasil;
     }
+    
+    @Test
+    public void Testpangkat1(){
+        Soal s = new Soal();
+        s.pangkat(1, 2);
+    }
+    
+    @After
+    public void AhirPangkat(){
+        System.out.println("test pangkat usai");
+    }    
+    
     
     public int faktorial (int bil){
         int hasil = 1;
