@@ -11,6 +11,7 @@ package com.mycompany.ujian_rkppl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class Soal {
     @Before
@@ -28,6 +29,14 @@ public class Soal {
     public void Testpangkat1(){
         Soal s = new Soal();
         s.pangkat(1, 2);
+        assertNotNull("seharusnya tidak eror", s);
+    }
+    
+    @Test
+    public void Testpangkat2(){
+        Soal s = new Soal();
+        s.pangkat(-1, 0);
+        assertNotNull("eror",s);
     }
     
     @After
