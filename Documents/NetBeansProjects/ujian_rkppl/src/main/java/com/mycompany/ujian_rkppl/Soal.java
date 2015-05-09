@@ -36,7 +36,7 @@ public class Soal {
     public void Testpangkat2(){
         Soal s = new Soal();
         s.pangkat(-1, 0);
-        assertNotNull("eror",s);
+        assertNotNull("ini eror",s);
     }
     
     @After
